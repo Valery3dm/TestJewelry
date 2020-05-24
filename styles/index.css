@@ -159,6 +159,30 @@ iframe {
     max-width: 100%;
 }
 
+#burgerImg {
+    width: 20px;
+    height: 20px;
+    visibility: hidden;
+}
+
+.active.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+.active {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 700px){
         body {
@@ -196,5 +220,16 @@ iframe {
         section#home {
         max-width:85%;
 
+    }
+
+    #burgerImg {
+        width: 20px;
+        height: 20px;  
+        visibility: visible;
+        box-shadow: 10px 11px 20px 0px #00000080;
+        
+        padding: 10px;
+        border-radius: 50px;
+        margin-top: 15px;
     }
 }
