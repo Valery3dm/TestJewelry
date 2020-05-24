@@ -48,22 +48,29 @@
         </section>
 
         <section id="soft">
-
-            <h3>1) RhinoGold</h3>
-            <div id="get-html-rhino"></div>
-            <button id="rhino">More for Rhino</button>
-
-            <h3>2) Zbrush & Sculptris</h3>
-            <div id="get-html-zbrush"></div>
-            <button id="zbrush">More for Zbrush</button>
-
-            <h3>3) Matrix</h3>
-            <div id="get-html-matrix"></div>
-            <button id="matrix">More for Matrix</button>
-
-            <h3>4) 3Design</h3>
-            <div id="get-html-design"></div>
-            <button id="design">More for 3Design</button>
+            <div>
+                <h3>1) RhinoGold</h3>
+                <div id="get-html-rhino"></div>
+                <button id="rhino">More for Rhino</button>
+            </div>
+            <div>
+                <h3>2) Zbrush & Sculptris</h3>
+                <div id="get-html-zbrush"></div>
+                <button id="zbrush">More for Zbrush</button>
+            </div>
+            
+            <div>
+                <h3>3) Matrix</h3>
+                <div id="get-html-matrix"></div>
+                <button id="matrix">More for Matrix</button>
+            </div>
+            
+            <div>
+                <h3>4) 3Design</h3>
+                <div id="get-html-design"></div>
+                <button id="design">More for 3Design</button>
+            </div>
+            
 
         </section>
 
@@ -94,14 +101,17 @@
             </div>
         </section>
         <section id="question">            
-            <form  action="https://formspree.io/xdolwnnr"
-            method="POST">
-                <h3>Your question:</h3>
-                <input type="text" name="username" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="message"></textarea>
-                <input type="submit" value="SEND">
-            </form>
+                <form id="my-form"
+                    action="https://formspree.io/xdolwnnr"
+                    method="POST"
+                    >
+                    <label>Email:</label>
+                    <input type="email" name="email" />
+                    <label>Message:</label>
+                    <input type="text" name="message" />
+                    <button id="my-form-button">Submit</button>
+                    <p id="my-form-status"></p>
+                </form>
             <footer>
                 <div id="contact">
                     <h3>Our contacts</h3>
