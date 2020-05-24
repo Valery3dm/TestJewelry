@@ -173,7 +173,10 @@ iframe {
 .active {
     display: block;
 }
-
+.navigatoion {
+    display: flex;
+    justify-content: center;
+}
 
 
 
@@ -211,8 +214,8 @@ iframe {
 
         nav ul {
         display: flex;
-        flex-direction:column;
-        max-width:150px;
+        flex-direction: row;
+        max-width: 430px;
         text-align:center;
         margin-top: 25px;
         margin:auto;
@@ -224,12 +227,12 @@ iframe {
 
     #burgerImg {
         width: 20px;
-        height: 20px;  
+        height: 20px;
         visibility: visible;
         box-shadow: 10px 11px 20px 0px #00000080;
-        
         padding: 10px;
         border-radius: 50px;
+        margin-left: 15px;
         margin-top: 15px;
     }
 }
