@@ -3,69 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3d jewelry soft</title>
+    <title>3d jewelry software</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@562&display=swap" 
+    rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <header>
-        <div id="logo">
-            <span>
-                <a class="siteName" href="index.html">3D jewelry soft</a>
-            </span>
-        </div>
-        <Section class="navigatoion">
-            <img id="burgerImg" src="images/menu.png">
-        <nav class="active">
-            <ul>
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#soft">Soft</a>
-                </li>
-                <li>
-                    <a href="#examples">Examples</a>
-                </li>
-                <li>
-                    <a href="#question">Question</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </Section>
-    </header>
+    <section class="header">
+            <header>
+                <div id="logo">
+                    <span>
+                        <img class="logo" src="images/chrome_vwN6TbeSLg.jpg">
+                    </span>
+                    <span class="logoText">3d jewelry software</span>
+                </div>
+                <section class="navigatoion">
+                    <nav class="active">
+                        <ul>
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#soft">Soft</a>
+                            </li>
+                            <li>
+                                <a href="#examples">Examples</a>
+                            </li>
+                            <li>
+                                <a href="#question">Question</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </header>
+            <div class="backImg"></div>
+    </section>
     <main>
         <section id="home">
-            <p>Before a 3D printer can start printing your jewellery model, you first need 
-                to work on a 3D file and create a 3D model for your jewellery with a 3D design software.</p>
+            <p>Before a 3D printer can start printing your jewellery model, 
+                you first need 
+                to work on a 3D file and create a 3D model for your 
+                jewellery with a 3D design software.</p>
         
-            <h1>There is no single software that dominates the market and is the most suitable for everyone.Every designer,
-                 whether beginner or experienced, has different needs, preferences, and objectives in mind.
+            <h1>There is no single software that dominates the market 
+                and is the most suitable for everyone.Every designer,
+                 whether beginner or experienced, has different needs, 
+                 preferences, and objectives in mind.
             </h1> 
-            <p>Here we will cover some of the most recommended software used by jewellery designers to kick-start your journey.</p>
+            <p>Here we will cover some of the most recommended software 
+                used by jewellery designers to kick-start your journey.</p>
         </section>
 
         <section id="soft">
-            <div>
+            <div class="borderSoft">
                 <h3>1) RhinoGold</h3>
                 <div id="get-html-rhino"></div>
                 <button id="rhino">More for Rhino</button>
             </div>
-            <div>
+            <div class="borderSoft">
                 <h3>2) Zbrush & Sculptris</h3>
                 <div id="get-html-zbrush"></div>
                 <button id="zbrush">More for Zbrush</button>
-            </div>
+            </div class="borderSoft">
             
-            <div>
+            <div class="borderSoft">
                 <h3>3) Matrix</h3>
                 <div id="get-html-matrix"></div>
                 <button id="matrix">More for Matrix</button>
             </div>
             
-            <div>
+            <div class="borderSoft">
                 <h3>4) 3Design</h3>
                 <div id="get-html-design"></div>
                 <button id="design">More for 3Design</button>
@@ -100,7 +110,9 @@
                 </iframe>
             </div>
         </section>
-        <section id="question">            
+        <section id="question">
+            <div>     
+                <h3>If you have a questions,<br> plaese feel free to contact</h3>       
                 <form id="my-form"
                     action="https://formspree.io/xdolwnnr"
                     method="POST"
@@ -112,7 +124,8 @@
                     <button id="my-form-button">Submit</button>
                     <p id="my-form-status"></p>
                 </form>
-            <footer>
+            </div>
+            
                 <div id="contact">
                     <h3>Our contacts</h3>
                     <ul>
@@ -121,12 +134,15 @@
                         <li>www.facebook.com/3d_jewelry_soft</li>
                         <li>www.3d_jewelry_soft.com</li>
                     </ul>
-                </div>
-                <span>3D JEWELRY SOFT 2020</span>
-            </footer>
+                </div> 
         </section>
+        <footer>
+            <span>3D JEWELRY SOFT 2020</span>
+        </footer>
     </main>
+    
     <script src="scripts/ajax-html.js"></script>
-    <script src="scripts/burger.js"></script>
+    
+    <script src="scripts/form.js"></script>
 </body>
 </html>

@@ -1,243 +1,157 @@
 body {
-    max-width: 1920px;
+    max-width: 1200px;
     margin: auto;
-    background: #dedede;
-    font-family: 'Lobster', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    padding: 20px;
 }
-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    margin-top: 25px;
-    margin-right: 200px;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
+header{
+    display:flex;
+    justify-content:space-between;
+    background-color: white;
+    /* align-items: center; */
+    padding: 20px;
     align-items: center;
-    }
-
-section#home {
+}
+#contact ul {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    max-width: 60%;
-    box-shadow: 10px 11px 20px 0px #00000080;
-    margin-top: 20px;
-    border-radius: 50px;
+    list-style-type: none;
     padding: 15px;
+    border: 2px solid;
+    margin: 8px;
 }
-
+img.logo {
+    height: 80px;
+}
+section#home {
+    text-align: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 2px solid #000;
+    max-width: 100%;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: larger;
+    /* list-style-type: cjk-heavenly-stem; */
+    color: black;
+}
 section#soft {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
     text-align: center;
-}
+    }
 
 section#examples {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
-}
-
-
-section#question {
-    display: grid;
-    justify-items: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 10px 11px 20px 0px #00000080;
-    padding: 20px;
-    border-radius: 50px;}
-
-footer {
-    display: grid;
     text-align: center;
-    box-shadow: 10px 11px 20px 0px #00000080;
-    margin-top: 20px;
-    padding-right: 33px;
-    border-radius: 50px;
+    column-gap: 20px;
+    row-gap: 20px;
 }
-
-.softBlock {
-    display: grid;
-    text-align: center;
-    max-width: 500px;
-    padding: 30px;
-    box-shadow: 10px 11px 20px 0px #00000080;
-    margin: 20px;
-    border-radius: 83px;
-}
-
-li {
+.navigatoion ul li {
     padding: 5px;
-}
-
-div#logo {
-    display: grid;
-    justify-items: center;
-    padding-top: 25px;
-}
-
-.link {
-    padding: 20px 20px 20px 20px;
-    box-shadow: 10px 11px 20px 0px #00000080;
-    margin: 20px;
-    border-radius: 30px;
-}
-
-form input {
-    width: 300px;
-    height: 25px;
-    margin-bottom: 5px;
-}
-
-input[type="text"] {
-    width: 300px;
-    height: 25px;
-    margin-bottom: 5px;
-}
-
-textarea {
-    width: 300px;
-    height: 80px;
-    margin-bottom: 10px;
-}
-
-
-
-input[type="submit"] {
-    width: 150px;
-}
-
-ul {
+    /* display: flex; */
+    /* flex-direction: column; */
     list-style-type: none;
+    /* color: black; */
 }
-
-
-
-
-nav ul li {
-    box-shadow: 10px 11px 20px 0px #00000080;
-    margin-right: 10px;
-    padding: 10px;
-    border-radius: 50px;
-    margin-top: 15px;
-}
-
-header div span {
-    box-shadow: 10px 11px 20px 0px #00000080;
-    padding: 20px;
-    border-radius: 50px;
-    font-size: xx-large;
-    margin-left: 250px;
-}
-
-a {
-    text-decoration: none;
-    color: #000 !important;
-}
-
-.softBlock:hover {
-    background: gold;
-}
-
-nav ul li:hover {
-    background: gold;
-}
-
 iframe {
     max-width: 100%;
 }
-
-#burgerImg {
-    width: 20px;
-    height: 20px;
-    visibility: hidden;
+.borderSoft {
+    border: 2px solid;
+    margin: 10px;
+    padding: 10px;
 }
 
-.active.hidden {
-    visibility: hidden;
-    height: 0;
+.link {
+    border: 2px solid;
+    margin: 10px;
+    padding: 10px;
+}
+form#my-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 327px;
+    align-items: center;
+    margin-top: 10px;
+    border: 2px solid;
+    padding: 15px;
+    height: 135px;
 }
 
-.active {
-    display: block;
+section#question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
-.navigatoion {
+
+footer {
+    /* display: flex; */
+    padding: 20px;
+    text-align: center;
+}
+
+div#contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px;
+}
+
+span {
+    /* text-align: center; */
+}
+h3 {
+    margin: 5px;
+}
+button#my-form-button {
+    margin-top: 15px;
+}
+
+.active ul {
     display: flex;
     justify-content: center;
+    /* padding: 5px; */
 }
-button {
-    height: 25px;
-    width: 150px;
+div#logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logoText{
+    margin-left: 20px;
+    font-size: xxx-large;
+}
+a:hover {
+    font-size: xx-large;
 }
 
-
-
-
-
-
-
-
-
-
-@media (max-width: 700px){
-        body {
-        display:flex;
-        flex-direction:column;
+@media (max-width: 700px) {
+    body{
+        max-width:700px;
     }
-
-        header{
-        display:flex;
-        flex-direction:column;
+    .navigatoion{
+        display:none;
     }
-
-        header div span {
-        margin:auto;
+    main section#soft{
+        display: grid;
+        grid-template-columns: 1fr;
     }
-
-        section#soft {
+    section#examples{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    section#question {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
 
-       section#examples {
-        display: flex;
-        flex-direction:column;
-    }
-
-        nav ul {
-        display: flex;
-        flex-direction: row;
-        max-width: 430px;
-        text-align:center;
-        margin-top: 25px;
-        margin:auto;
-    }
-        section#home {
-        max-width:85%;
-
-    }
-
-    #burgerImg {
-        width: 20px;
-        height: 20px;
-        visibility: visible;
-        box-shadow: 10px 11px 20px 0px #00000080;
-        padding: 10px;
-        border-radius: 50px;
-        margin-left: 15px;
-        margin-top: 15px;
-    }
-}
+ }
