@@ -2,16 +2,13 @@ body {
     max-width: 1200px;
     margin: auto;
     font-family: 'Dancing Script', cursive;
-    font-size: 20px;
+    font-size: 13px;
     padding: 20px;
 }
 header{
-    display:flex;
-    justify-content:space-between;
-    background-color: white;
-    /* align-items: center; */
     padding: 20px;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 #contact ul {
     display: flex;
@@ -126,18 +123,18 @@ div#logo {
 }
 .logoText{
     margin-left: 20px;
-    font-size: xxx-large;
+    font-size: 27px;
 }
 a:hover {
     font-size: xx-large;
+}
+img#burgerImg {
+    display: none;
 }
 
 @media (max-width: 700px) {
     body{
         max-width:700px;
-    }
-    .navigatoion{
-        display:none;
     }
     main section#soft{
         display: grid;
@@ -152,6 +149,25 @@ a:hover {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+    }
+    img#burgerImg {
+        display: block;
+        width: 15px;
+        border: 2px solid;
+        padding: 5px;
+        justify-self: end;
+        align-self: end;
+    }
+    .active ul{
+        display:none;
+    }
+    ul.hidden {
+        display: block;
+    }
+    .navigatoion{
+        grid-column: 2 / 3;
+        justify-self: end;
+        /* align-self: end; */
     }
 
  }
