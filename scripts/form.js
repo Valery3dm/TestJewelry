@@ -1,5 +1,7 @@
 
-window.addEventListener("DOMContentLoaded", function() {
+(function () { 
+  
+  window.addEventListener("DOMContentLoaded", function() {
 
     // get the form elements defined in your form HTML above
     
@@ -44,4 +46,7 @@ window.addEventListener("DOMContentLoaded", function() {
     };
     xhr.send(data);
   }
+
+ }());
+
 

@@ -1,4 +1,5 @@
-document.getElementById('rhino')
+(function () {
+    document.getElementById('rhino')
     .addEventListener('click',rhino);
     function rhino(){
         const xhr = new XMLHttpRequest();
@@ -53,3 +54,5 @@ document.getElementById('design')
         xhr.open('GET','form/design-html.html',true);
         xhr.send();
     }
+
+ }());
