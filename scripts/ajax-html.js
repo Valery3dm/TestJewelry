@@ -1,5 +1,14 @@
-document.getElementById('rhino')
-    .addEventListener('click',rhino);
+(function () { 
+    
+    document.getElementById('rhino')
+        .addEventListener('click',rhino);
+    document.getElementById('zbrush')
+        .addEventListener('click',zbrush);
+    document.getElementById('matrix')
+        .addEventListener('click',matrix);
+    document.getElementById('design')
+        .addEventListener('click',design);
+
     function rhino(){
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -13,8 +22,6 @@ document.getElementById('rhino')
         document.querySelector('.rhinoLess').classList.toggle('rhinoDel');  
     }
 
-document.getElementById('zbrush')
-    .addEventListener('click',zbrush);
     function zbrush(){
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -28,8 +35,7 @@ document.getElementById('zbrush')
         document.querySelector('.zbrushLess').classList.toggle('zbrushDel'); 
     }
 
-document.getElementById('matrix')
-    .addEventListener('click',matrix);
+
     function matrix(){
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -43,8 +49,6 @@ document.getElementById('matrix')
         document.querySelector('.matrixLess').classList.toggle('matrixDel'); 
     }
 
-document.getElementById('design')
-    .addEventListener('click',design);
     function design(){
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -57,3 +61,5 @@ document.getElementById('design')
         xhr.send();
         document.querySelector('.designLess').classList.toggle('designDel'); 
     }
+
+}());
