@@ -127,6 +127,18 @@ a:hover {
 img#burgerImg {
     display: none;
 }
+.rhinoLess.rhinoDel {
+    display: none;
+}
+.zbrushLess.zbrushDel {
+    display: none;
+}
+.matrixLess.matrixDel {
+    display: none;
+}
+.designLess.designDel {
+    display: none;
+}
 
 @media (max-width: 700px) {
     body{
@@ -173,17 +185,6 @@ img#burgerImg {
     .navigatoion ul li{
         border-bottom:2px solid;
     }
-    .rhinoLess.rhinoDel {
-        display: none;
-    }
-    .zbrushLess.zbrushDel {
-        display: none;
-    }
-    .matrixLess.matrixDel {
-        display: none;
-    }
-    .designLess.designDel {
-        display: none;
-    }
+
 
  }
