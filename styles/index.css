@@ -101,9 +101,6 @@ div#contact {
     padding: 0px;
 }
 
-span {
-    /* text-align: center; */
-}
 h3 {
     margin: 5px;
 }
@@ -114,7 +111,6 @@ button#my-form-button {
 .active ul {
     display: flex;
     justify-content: center;
-    /* padding: 5px; */
 }
 div#logo {
     display: flex;
@@ -173,11 +169,21 @@ img#burgerImg {
     .navigatoion{
         grid-column: 2 / 3;
         justify-self: end;
-        /* align-self: end; */
     }
     .navigatoion ul li{
         border-bottom:2px solid;
-        
+    }
+    .rhinoLess.rhinoDel {
+        display: none;
+    }
+    .zbrushLess.zbrushDel {
+        display: none;
+    }
+    .matrixLess.matrixDel {
+        display: none;
+    }
+    .designLess.designDel {
+        display: none;
     }
 
  }

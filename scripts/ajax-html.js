@@ -1,5 +1,4 @@
-(function () {
-    document.getElementById('rhino')
+document.getElementById('rhino')
     .addEventListener('click',rhino);
     function rhino(){
         const xhr = new XMLHttpRequest();
@@ -11,6 +10,7 @@
         }
         xhr.open('GET','form/rhino-form.html',true);
         xhr.send();
+        document.querySelector('.rhinoLess').classList.toggle('rhinoDel');  
     }
 
 document.getElementById('zbrush')
@@ -25,6 +25,7 @@ document.getElementById('zbrush')
         }
         xhr.open('GET','form/zbrush-html.html',true);
         xhr.send();
+        document.querySelector('.zbrushLess').classList.toggle('zbrushDel'); 
     }
 
 document.getElementById('matrix')
@@ -39,6 +40,7 @@ document.getElementById('matrix')
         }
         xhr.open('GET','form/matrix-html.html',true);
         xhr.send();
+        document.querySelector('.matrixLess').classList.toggle('matrixDel'); 
     }
 
 document.getElementById('design')
@@ -53,6 +55,5 @@ document.getElementById('design')
         }
         xhr.open('GET','form/design-html.html',true);
         xhr.send();
+        document.querySelector('.designLess').classList.toggle('designDel'); 
     }
-
- }());
