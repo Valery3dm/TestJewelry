@@ -32,7 +32,6 @@ section#home {
 nav ul li a {
     text-decoration: none;
     font-size: larger;
-    /* list-style-type: cjk-heavenly-stem; */
     color: black;
 }
 section#soft {
@@ -51,10 +50,7 @@ section#examples {
 }
 .navigatoion ul li {
     padding: 5px;
-    /* display: flex; */
-    /* flex-direction: column; */
     list-style-type: none;
-    /* color: black; */
 }
 iframe {
     max-width: 100%;
@@ -89,7 +85,6 @@ section#question {
 }
 
 footer {
-    /* display: flex; */
     padding: 20px;
     text-align: center;
 }
