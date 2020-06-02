@@ -61,23 +61,39 @@
         document.querySelector('.designLess').classList.toggle('designDel'); 
     } */
 
-    document.querySelectorAll('but')
+    document.querySelectorAll('#but')
         .forEach(element => element.addEventListener('click',getAjaxElement));
         
-        let buttonName = document.getElementById('but').value;
-        
-        function getAjaxElement(){
-
-            if (buttonName == "rhino") {
-                console.log("rhino");
-            }else if(buttonName == "zbrush"){
-                console.log("zbrush");
-            }else if(buttonName == "matrix"){
-                console.log("matrix");
-            }else if(buttonName == "3Design"){
-                console.log("3Design");
-            }else{
-                console.log("ERORR");
+        function getAjaxElement(e){
+            let clickedButton = e.target.value;
+            
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('get-html-design')
+                        .innerHTML = xhr.responseText;
+                } 
             }
+
+            if (clickedButton  == "rhino") {
+                xhr.open('GET','form/rhino-form.html',true);
+                xhr.send();
+                document.querySelector('.rhinoLess').classList.toggle('rhinoDel'); 
+            }else if(clickedButton  == "zbrush"){
+                xhr.open('GET','form/zbrush-html.html',true);
+                xhr.send();
+                document.querySelector('.zbrushLess').classList.toggle('zbrushDel'); 
+            }else if(clickedButton  == "matrix"){
+                xhr.open('GET','form/matrix-html.html',true);
+                xhr.send();
+                document.querySelector('.matrixLess').classList.toggle('matrixDel'); 
+            }else{(clickedButton == "3Design")
+                xhr.open('GET','form/design-html.html',true);
+                xhr.send();
+                document.querySelector('.designLess').classList.toggle('designDel'); 
+            }
+
         }
+
+    
 
