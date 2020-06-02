@@ -1,6 +1,5 @@
-(function () { 
-    
-    document.getElementById('rhino')
+
+    /* document.getElementById('rhino')
         .addEventListener('click',rhino);
     document.getElementById('zbrush')
         .addEventListener('click',zbrush);
@@ -60,6 +59,26 @@
         xhr.open('GET','form/design-html.html',true);
         xhr.send();
         document.querySelector('.designLess').classList.toggle('designDel'); 
-    }
+    } */
 
-}());
+    document.querySelectorAll('but')
+        .forEach(element =>
+            element.addEventListener('click',getAjaxElement));
+        
+        let buttonName = document.getElementById('but').value;
+        
+        function getAjaxElement(){
+
+            if (buttonName == "rhino") {
+                console.log("rhino")
+            }else if(buttonName == "zbrush"){
+                console.log("zbrush")
+            }else if(buttonName == "matrix"){
+                console.log("matrix")
+            }else if(buttonName == "3Design"){
+                console.log("3Design")
+            }else{
+                console.log("ERORR")
+            }
+        }
+
