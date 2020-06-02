@@ -62,37 +62,38 @@
     } */
 
     document.querySelectorAll('#but')
-	.forEach(element => element.addEventListener('click', getAjaxElement));
+	    .forEach(element => element.addEventListener('click', getAjaxElement));
 
 function getAjaxElement(e) {
-    let clickedButton = e.target.value;
-    
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-                past.innerHTML = xhr.responseText;
-        } 
-    }
-
-    if (clickedButton == "rhino") {
-        let past = document.getElementById('get-html-rhino');
-		let openXHR = xhr.open('GET', 'form/rhino-form.html', true);
-		let changeClass = document.querySelector('.rhinoLess').classList.toggle('rhinoDel');
+	let clickedButton = e.target.value;
+	const xhr = new XMLHttpRequest();
+	let past;
+	let openXHR;
+	let changeClass;
+	if (clickedButton == "rhino") {
+		past = document.getElementById('get-html-rhino');
+		openXHR = xhr.open('GET', 'form/rhino-form.html', true);
+		changeClass = document.querySelector('.rhinoLess').classList.toggle('rhinoDel');
 	} else if (clickedButton == "zbrush") {
-        let past = document.getElementById('get-html-zbrush');
-		let openXHR = xhr.open('GET', 'form/zbrush-html.html', true);
-		let changeClass = document.querySelector('.zbrushLess').classList.toggle('zbrushDel');
+		past = document.getElementById('get-html-zbrush');
+		openXHR = xhr.open('GET', 'form/zbrush-html.html', true);
+		changeClass = document.querySelector('.zbrushLess').classList.toggle('zbrushDel');
 	} else if (clickedButton == "matrix") {
-        let past = document.getElementById('matrixLess');
-		let openXHR = xhr.open('GET', 'form/matrix-html.html', true);
-		let changeClass = document.querySelector('.matrixLess').classList.toggle('matrixDel');
+		past = document.getElementById('get-html-matrix');
+		openXHR = xhr.open('GET', 'form/matrix-html.html', true);
+		changeClass = document.querySelector('.matrixLess').classList.toggle('matrixDel');
 	} else {
-        let past = document.getElementById('get-html-design');
-		let openXHR = xhr.open('GET', 'form/design-html.html', true);
-		let changeClass = document.querySelector('.designLess').classList.toggle('designDel');
+		past = document.getElementById('get-html-design');
+		openXHR = xhr.open('GET', 'form/design-html.html', true);
+		changeClass = document.querySelector('.designLess').classList.toggle('designDel');
 	}
-    openXHR;
-    xhr.send();
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			past.innerHTML = xhr.responseText;
+		}
+	}
+	openXHR;
+	xhr.send();
 	changeClass;
 
 }
