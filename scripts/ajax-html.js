@@ -88,12 +88,11 @@ function getAjaxElement(e) {
 		let changeClass = document.querySelector('.matrixLess').classList.toggle('matrixDel');
 	} else {
         let past = document.getElementById('get-html-design');
-		(clickedButton == "3Design")
 		let openXHR = xhr.open('GET', 'form/design-html.html', true);
 		let changeClass = document.querySelector('.designLess').classList.toggle('designDel');
 	}
-    openXHR;
+    openXHR();
     xhr.send();
-	changeClass;
+	changeClass();
 
 }
