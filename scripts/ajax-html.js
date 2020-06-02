@@ -91,8 +91,8 @@ function getAjaxElement(e) {
 		let openXHR = xhr.open('GET', 'form/design-html.html', true);
 		let changeClass = document.querySelector('.designLess').classList.toggle('designDel');
 	}
-    openXHR();
+    openXHR;
     xhr.send();
-	changeClass();
+	changeClass;
 
 }
