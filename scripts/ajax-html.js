@@ -62,38 +62,38 @@
     } */
 
     document.querySelectorAll('#but')
-        .forEach(element => element.addEventListener('click',getAjaxElement));
-        
-        function getAjaxElement(e){
-            let clickedButton = e.target.value;
-            
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    document.getElementById('get-html-design')
-                        .innerHTML = xhr.responseText;
-                } 
-            }
+	.forEach(element => element.addEventListener('click', getAjaxElement));
 
-            if (clickedButton  == "rhino") {
-                xhr.open('GET','form/rhino-form.html',true);
-                xhr.send();
-                document.querySelector('.rhinoLess').classList.toggle('rhinoDel'); 
-            }else if(clickedButton  == "zbrush"){
-                xhr.open('GET','form/zbrush-html.html',true);
-                xhr.send();
-                document.querySelector('.zbrushLess').classList.toggle('zbrushDel'); 
-            }else if(clickedButton  == "matrix"){
-                xhr.open('GET','form/matrix-html.html',true);
-                xhr.send();
-                document.querySelector('.matrixLess').classList.toggle('matrixDel'); 
-            }else{(clickedButton == "3Design")
-                xhr.open('GET','form/design-html.html',true);
-                xhr.send();
-                document.querySelector('.designLess').classList.toggle('designDel'); 
-            }
-
-        }
-
+function getAjaxElement(e) {
+    let clickedButton = e.target.value;
     
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+                past.innerHTML = xhr.responseText;
+        } 
+    }
 
+    if (clickedButton == "rhino") {
+        let past = document.getElementById('get-html-rhino');
+		let openXHR = xhr.open('GET', 'form/rhino-form.html', true);
+		let changeClass = document.querySelector('.rhinoLess').classList.toggle('rhinoDel');
+	} else if (clickedButton == "zbrush") {
+        let past = document.getElementById('get-html-zbrush');
+		let openXHR = xhr.open('GET', 'form/zbrush-html.html', true);
+		let changeClass = document.querySelector('.zbrushLess').classList.toggle('zbrushDel');
+	} else if (clickedButton == "matrix") {
+        let past = document.getElementById('matrixLess');
+		let openXHR = xhr.open('GET', 'form/matrix-html.html', true);
+		let changeClass = document.querySelector('.matrixLess').classList.toggle('matrixDel');
+	} else {
+        let past = document.getElementById('get-html-design');
+		(clickedButton == "3Design")
+		let openXHR = xhr.open('GET', 'form/design-html.html', true);
+		let changeClass = document.querySelector('.designLess').classList.toggle('designDel');
+	}
+    openXHR;
+    xhr.send();
+	changeClass;
+
+}
