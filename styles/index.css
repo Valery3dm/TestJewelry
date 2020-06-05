@@ -4,11 +4,16 @@ body {
     font-family: 'Dancing Script', cursive;
     font-size: 20px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 header{
-    padding: 20px;
+    /* padding: 20px; */
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 5fr 1fr;
+    position: absolute;
+    max-width: 1200px;
+    /* right: 20px; */
 }
 #contact ul {
     display: flex;
@@ -20,6 +25,7 @@ header{
 }
 img.logo {
     height: 80px;
+    margin-left: 10px;
 }
 section#home {
     text-align: center;
@@ -110,11 +116,14 @@ button#my-form-button {
     display: flex;
     justify-content: center;
     /* position: absolute; */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 div#logo {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 65px;
 }
 .logoText{
     margin-left: 20px;
@@ -173,34 +182,51 @@ h1.heading {
         padding: 5px;
         justify-self: end;
         align-self: end;
-        position: absolute;
-        top: 115px;
-        right: 20px;
+        position: relative;
+        top: 65px;
+        right: -251px;
     }
     .active ul{
-        display:none;
-    }
-    ul.hidden {
-        display: block;
-        position: absolute;
-        right: 40px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: -300px;
         background-color: #ededed;
         padding-left: 10px;
         padding-right: 10px;
         margin-top: 0;
-        width: 100%;
-        top: 145px;
-        left: 0;
-        text-align: center;
+        width: 150px;
+        top: 71px;
+        transition: right .4s linear;
+        text-align: start;
+        border: 2px solid;
+    }
+    ul.hidden {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: -106px;
+        background-color: #ededed;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 0;
+        width: 150px;
+        top: 71px;
+        align-items: start;
+        border: 2px solid;
+        margin-right: 20px;
     }
     .navigatoion{
-        grid-column: 2 / 3;
+        grid-column: 4 / 5;
         justify-self: end;
     }
     .navigatoion ul li{
-        border-bottom:2px solid;
+        /* border-bottom:2px solid; */
     }
     h1.heading{
         grid-column:1;
+    }
+    header{
+        max-width: 700px;
     }
  }
